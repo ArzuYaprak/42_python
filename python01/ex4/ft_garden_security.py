@@ -1,4 +1,5 @@
 class Plant:
+    # not: Alt çizgili alanlar doğrudan dışarıdan değiştirilmesin diye korunuyor.
     def __init__(self, name: str, height: float, age_days: int) -> None:
         self._name = name
         self._height = 0.0
@@ -18,6 +19,7 @@ class Plant:
             print(f"{self._name}: {round(self._height, 1)}cm, {self._age_days} days old")
             
     def set_height(self, height: float) -> None:
+        # not: Değeri değiştirmeden önce negatif yükseklik kontrol ediliyor.
         if height < 0:
             print(f"{self._name}: Error, height can't be negative")
             print("Height update rejected")
@@ -34,6 +36,7 @@ class Plant:
         print(f"Age updated: {self._age_days} days")
 
     def get_height(self) -> float:
+        # not: Dışarıdan değeri okumak için getter kullanılıyor.
         return self._height
 
     def get_age(self) -> int:

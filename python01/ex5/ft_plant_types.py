@@ -1,4 +1,5 @@
 class Plant:
+    # not: Flower, Tree ve Vegetable ortak davranışları Plant'ten alıyor.
     def __init__(self, name: str, height: float, age_days: int) -> None:
         self._name = name
         self._height = 0.0
@@ -46,6 +47,7 @@ class Plant:
         self.set_age(self._age_days + day)
         
 class Flower(Plant):
+    # not: Flower, Plant'e renk ve blooming durumu ekliyor.
     def __init__(self, name: str, height: float, age_days: int, color: str) -> None:
         self._name = name
         self._height = height
@@ -67,6 +69,7 @@ class Flower(Plant):
             
             
 class Tree(Plant):
+    # not: Tree trunk_diameter bilgisini ve shade davranışını ekliyor.
     def __init__(self, name: str, height: float, age_days: int, trunk_diameter: float):
         super().__init__(name, height, age_days)   
         self._trunk_diameter = trunk_diameter   
@@ -82,6 +85,7 @@ class Tree(Plant):
             f"{round(self._trunk_diameter, 1)}cm wide."
         )
 class Vegetable(Plant):
+    # not: Vegetable age metodunu override edip besin değerini artırıyor.
     def __init__(self, name: str, height: float, age_days: int, harvest_season: str, nutritional_value: int):
         super().__init__(name, height, age_days)
         self._harvest_season = harvest_season

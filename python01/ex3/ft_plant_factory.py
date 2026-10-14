@@ -1,4 +1,5 @@
 class Plant:
+    # not: Aynı sınıftan farklı özelliklere sahip birçok nesne üretiyoruz.
     def __init__(self, name: str, height: float, age_days: int) -> None:
         self.name = name
         self.height = height
@@ -24,6 +25,7 @@ if __name__ == "__main__":
     ]
     
     for plant in plants:
+        # not: Listedeki her nesne aynı show metodunu çağırabiliyor.
         print("Created: ", end="") 
         plant.show()
         

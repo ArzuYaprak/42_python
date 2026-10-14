@@ -1,0 +1,2 @@
+from .light_spellbook import light_spell_record#Bunun amacı, light_spell_record fonksiyonunu grimoire paketinin dış arayüzüne açmak
+                                                #dışarıdan çağrılacak ana özellik bu olduğu için bunu dışarıya açıyoruz

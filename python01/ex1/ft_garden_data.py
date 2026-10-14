@@ -1,10 +1,12 @@
 class Plant:
+    # not: Sınıf, her bitkinin ortak verilerini ve davranışını topluyor.
     def __init__(self, name: str, height: int, age: int) -> None:
         self.name = name
         self.height = height
         self.age = age
 
     def show(plant) -> None:
+        # not: plant burada self ile aynı rolde; self adı daha anlaşılır olur.
         print(f"{plant.name}: {plant.height}cm, {plant.age} days old")
 
 

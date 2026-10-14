@@ -1,4 +1,5 @@
 class Plant:
+    # not: Bu egzersizde height ve age_days değerleri zamanla değişiyor.
     def __init__(self, name: str, height: float, age_days: int) -> None:
       self.name = name
       self.height = height
@@ -8,9 +9,11 @@ class Plant:
         print(f"{self.name}: {self.height:.1f}cm, {self.age_days} days old")
         
     def grow(self, growth: float) -> None:
+        # not: += mevcut yüksekliğe büyüme miktarını ekler.
         self.height += growth
         
     def age(self, day: int) -> None:
+        # not: Yaş da aynı nesnenin içinde güncelleniyor.
         self.age_days += day
     
 if __name__ == "__main__":

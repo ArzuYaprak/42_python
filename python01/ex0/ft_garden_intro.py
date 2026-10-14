@@ -1,4 +1,5 @@
 def ft_garden_intro(name: str, height: int, age: int) -> None:
+    # not: Bu fonksiyon verilen bitki bilgilerini sadece formatlayıp yazdırıyor.
     print("=== Welcome to My Garden ===")
     print(f"Plant: {name}")
     print(f"Height: {height}cm")
