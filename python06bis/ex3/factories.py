@@ -14,7 +14,14 @@ class CreatureFactory(ABC):
         
 class FlameFactory(CreatureFactory):
     def create_base(self) -> Flameling:
-        return Flameling()
+        return Flameling()#yeni bir flaming nesnesi oluşturacak ve onu döndüreck şöyle olsaydı sınıfın kendisini döndürürdü return Flameling
 
     def create_evolved(self) -> Pyrodon:
         return Pyrodon()
+    
+class TransformCreatureFactory(CreatureFactory):
+    def create_base(self) -> Shiftling:
+        return Shiftling()
+
+    def create_evolved(self) -> Morphagon:
+        return Morphagon()
